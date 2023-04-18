@@ -48,10 +48,7 @@ async function handleEvent(event) {
     messages: [{
      role: 'user',
      content: event.message.text,
-   },{
-		role: 'system',
-		content: data.choices.message.content,
-	  }],
+   }],
 	max_tokens: 2000
   });
 
