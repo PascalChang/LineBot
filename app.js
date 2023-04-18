@@ -48,8 +48,11 @@ async function handleEvent(event) {
     messages: [{
      role: 'user',
      content: event.message.text,
-   }],
-	max_tokens: 500
+   },{
+		role: 'system',
+		content: data.choices.message.content,
+	  }],
+	max_tokens: 2000
   });
 
   // create a echoing text message
